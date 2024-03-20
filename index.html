@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logoMarvel.png">
     <title>Peliculas de marvel</title>
+    
 </head>
 <body>
+    <div class="navbar">
+        <div class="titulo">
+            <h1>Pagina de Peliculas</h1>
+        </div>
+        <div class="enlaces">
+            <a class="active" href="index.html">Home</a>
+            <a href="Movies.html">Movies</a>
+            <a href="upcoming.html">Upcoming</a>
+        </div>
+    </div>
     <main>
-        <h1 style="font-style: oblique; text-align: center;" >Pagina de Peliculas</h1>
         <div>
-            <h2>Peliculas de Marvel</h2>
-            <ul>
-                <li><a href="#Avengers">The Avengers</a></li>
-                <li><a href="#CapMarvel">Capitana Marvel</a></li>
-                <li><a href="#Spiderman">Spiderman</a></li>
-            </ul>
-            <p>Aquí encontraras un resumen de algunas peliculas de MARVEL</p>
-        
+            <div  class="accesos-directos">
+                <h2>Peliculas de Marvel</h2>
+                <ul class="peliculas">
+                    <li><a href="#Avengers">The Avengers</a></li>
+                    <li><a href="#CapMarvel">Capitana Marvel</a></li>
+                    <li><a href="#Spiderman">Spiderman</a></li>
+                </ul>
+                <p>Aquí encontraras un resumen de algunas peliculas de MARVEL</p>
+            </div>
             <h2 style="font-size: medium; padding-top: 50px;"><strong>      MARVEL</strong></h2>
             <section id="Avengers">
                 <h3>The Avengers</h3>
-                <img src="images/Avengers.png" alt="Poster de pelicula Avengers" width="7%">
+                <img src="images/Avengers.png" alt="Poster de pelicula Avengers" height="200px" width="170px">
                 <figcaption>
                     <strong>Estreno:</strong>
                     <em>11 de abril de 2011 <br></em>
@@ -47,7 +60,14 @@
         
             <section id="CapMarvel">
                 <h3>Capitana Marvel</h3>
-                <img src="images/CapMarvel.png" alt="Poster de pelicula Capitana MARVEL" width="7%">
+                <table>
+                    <tr>
+                      <td>Emil</td>
+                      <td>Tobias</td>
+                      <td>Linus</td>
+                    </tr>
+                  </table>
+                <img src="images/CapMarvel.png" alt="Poster de pelicula Capitana MARVEL" height="200px" width="170px">
                 <figcaption><strong>Estreno:</strong> <em>8 de marzo de 2019 <br></em></figcaption>
                 <details>
                     <summary>Más información</summary>
@@ -68,7 +88,7 @@
         
             <section id="Spiderman">
                 <h3>Spiderman</h3>
-                <img src="images/Spiderman.png" alt="Poster de pelicula Spiderman" width="7%">
+                <img src="images/Spiderman.png" alt="Poster de pelicula Spiderman" height="200px" width="170px">
                 <figcaption><strong>Estreno:</strong> <em> 7 de Julio de 2017 <br></em></figcaption>
                 <details>
                     <summary>Más información</summary>
@@ -77,12 +97,14 @@
                     </p>
                     <p style="color: red;">
                         Director: Jon Watts                    </p>
-                    
             </section>
         </div>
     </main>
-    <footer style="background-color: #ccc; color: #fff; text-align: center; padding: 10px;">
-        <p>© 2023 Películas de Marvel. Todos los derechos reservados.</p>
-    </footer>
+    <div class="footer-1">
+        <footer class="footer">
+            <p>© 2023 Películas de Marvel. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
 </body>
 </html>
