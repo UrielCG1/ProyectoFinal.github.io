@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="myScript1.js"></script>
     <link rel="icon" type="image/x-icon" href="images/logoMarvel.png">
     <title>Peliculas de marvel</title>
     
@@ -32,12 +33,12 @@
                 </ul>
             </div>
             
-            <h2 class="h2Marvel" style="font-size: medium; padding-top: 50px;"><strong>    MARVEL</strong></h2>
+            <h2 class="h2Marvel" style="font-size: medium; padding-top: 20px;"><strong>    MARVEL</strong></h2>
 
             <div class="peliculas-info">
-                <section id="Avengers">
+                <section id="Avengers" onload="pickImages()">
                     <h3>The Avengers</h3>
-                    <img src="images/Avengers.png" alt="Poster de pelicula Avengers" height="200px" width="170px">
+                    <img class="imagenes-peliculas" src="images/Avengers.png" alt="Poster de pelicula Avengers" height="200px" width="170px">
                     <figcaption>
                         <strong>Estreno:</strong>
                         <em>11 de abril de 2011 <br></em>
@@ -64,10 +65,10 @@
             
                 <section id="CapMarvel">
                     <h3>Capitana Marvel</h3>
-                    <img src="images/CapMarvel.png" alt="Poster de pelicula Capitana MARVEL" height="200px" width="170px">
+                    <img class="imagenes-peliculas" src="images/CapMarvel.png" alt="Poster de pelicula Capitana MARVEL" height="200px" width="170px">
                     <figcaption><strong>Estreno:</strong> <em>8 de marzo de 2019 <br></em></figcaption>
                     <details>
-                        <summary>Más información</summary>
+                        <summary id="cap-marvel">Más información</summary>
                         <p>
                             Producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures, es la vigesimoprimera película del Universo cinematográfico de Marvel (UCM, por sus siglas en español).                     </p>
                         <p style="color: red;">
@@ -85,15 +86,17 @@
             
                 <section id="Spiderman">
                     <h3>Spiderman</h3>
-                    <img src="images/Spiderman.png" alt="Poster de pelicula Spiderman" height="200px" width="170px">
+                    <img class="imagenes-peliculas" src="images/Spiderman.png" alt="Poster de pelicula Spiderman" height="200px" width="170px">
                     <figcaption><strong>Estreno:</strong> <em> 7 de Julio de 2017 <br></em></figcaption>
                     <details>
                         <summary>Más información</summary>
                         <p>
                             Spider-Man has been one of the biggest superhero franchises to hit the big screen in the past two decades. Who was almost cast in the three different iterations of the superhero tale?
                         </p>
-                        <p style="color: red;">
-                            Director: Jon Watts                    </p>
+                        <button type="button" id="toggleButton" onclick="toggleMe()">Mostrar Directores</button>
+                        <p id="demo" style="color: red;">
+                        Dirigida por Joss Whedon y producida por Kevin Feige.
+                        </p>
                 </section>
             </div>
             <div>
@@ -108,6 +111,5 @@
             <p>© 2023 Películas de Marvel. Todos los derechos reservados.</p>
         </footer>
     </div>
-    
 </body>
 </html>

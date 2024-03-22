@@ -136,6 +136,39 @@ h1, h2, h3 {
     gap: 20px;
     padding: 20px;
   }
+
+  
+  /* IMAGENES DE PELICULAS, al pasar el mouse por encima se activa y desactiva la anición con el uso de HOVER¿*/
+  .imagenes-peliculas {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .imagenes-peliculas {
+    border: 5px solid #007bff;
+    transition: transform 0.3s ease;
+  }
+  
+  .imagenes-peliculas:hover {
+    transform: scale(1.1);
+  }
+  
+  .imagenes-peliculas:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .imagenes-peliculas:hover:before {
+    opacity: 1;
+  }
   
  /* EJEMPLO DEL FOCUS, se activa si el usuario da click.*/
   .input-focus {
