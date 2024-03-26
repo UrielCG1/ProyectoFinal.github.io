@@ -4,22 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="myScript.js"></script>
     <link rel="icon" type="image/x-icon" href="images/logoMarvel.png">
-    <title>Document</title>
+    <title>Peliculas de marvel</title>
+    
 </head>
 <body>
-    <div class="navbar">
-        <div>
-            <h1  class="titulo">
-                Página de peliculas
-            </h1>
-        </div>
-        <div class="enlaces">
+    <header class="navbar"> 
+        <img src="images/logo.jpg" alt="" class="logo" style="padding-left: 30px;">
+        
+        <nav>
+            <ul class="enlaces">
+                <li class="items"><a href="index.html">Home</a></li>
+                <li class="items"><a href="Movies.html">Peliculas</a></li>
+                <li class="items"><a href="upcoming.html">Estrenos</a></li>
+                <li class="items"><a href="index.html">About Us</a></li>
+                <li onclick="showSidebar()"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="closeSidebar()"><a href="#"><ion-icon name="close-outline"></ion-icon></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Movies.html">Peliculas</a></li>
+                <li><a href="upcoming.html">Upcoming</a></li>
+                <li><a href="index.html">About</a></li>
+                <img src="images/logo.jpg" alt="" style="height: 70px; width: 70px;">
+            </ul>
+        </nav>
+        <!--<div class=" !important--
+        <div class="enlaces" id="enlaces">
             <a class="active" href="index.html">Home</a>
             <a href="Movies.html">Peliculas</a>
             <a href="upcoming.html">Estrenos</a>
+        </div> -->
+</header>
+<main>
+    <h1>Movies</h1>
+     
+    <h2>Basic Media Queries</h2>
+    <p>In this assignment you will add two media queries to the css file.</p>
+    <ul>
+      <li>The first media query should trigger at 772px and change the layout of the divs to be 45% of the viewport width. The images should have a maximum height of 30% of the viewport height.</li>
+
+      <li>The second media query should trigger at 998px and change the layout of the divs to be 30% of the viewport width.</li>
+    </ul>
+    <p>You will need to make additional changes to ensure that the divs appear next to each other and that the images are contained within the divs.  Some of these properties include display, width and max-height.</p>
+    
+    <div class="proyecto-responsivo">
+        <div class="img2">
+        <img src="images/Red.jpeg" alt="Red" width="200">
+        <p class = "label">Red</p>
+        </div>
+        <div class="img2">
+        <img src="images/Orange.png" alt="Orange" width="200">
+        <p class = "label">Orange</p>
+        </div>
+        <div class="img2">
+        <img src="images/Yellow.png" alt="Yellow" width="200">
+        <p class = "label">Yellow</p>
+        </div>
+        <div class="img2">
+        <img src="images/Green.png" alt="Green" width="200">
+        <p class = "label">Green</p>
+        </div>
+        <div class="img2">
+        <img src="images/Blue.png" alt="Blue" width="200">
+        <p class = "label">Blue</p>
+        </div>
+        <div class="img2">
+        <img src="images/Indigo.jpeg" alt="Indigo" width="200">
+        <p class = "label">Indigo</p>
+        </div>
+        <div class="img2">
+        <img src="images/Purple.png" alt="Purple" width="200">
+        <p class = "label">Purple</p>
+        </div>
+        <div class="img2">
+        <img src="images/Pink.jpeg" alt="Pink" width="200">
+        <p class = "label">Pink</p>
+        </div>
+        <div class="img2">
+        <img src="images/White.png" alt="White" width="200">
+        <p class = "label">White</p>
         </div>
     </div>
-    <h1>Movies</h1>
+</main>
 </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="myScript.js"></script>
     <link rel="icon" type="image/x-icon" href="images/logoMarvel.png">
-    <title>Upcomings</title>
+    <title>Peliculas de marvel</title>
+    
 </head>
 <body>
-    <div class="navbar">
-        <div>
-            <h1  class="titulo">
-                Página de peliculas
-            </h1>
-        </div>
-        <div class="enlaces">
-            <a class="active" href="index.html">Home</a>
-            <a href="Movies.html">Peliculas</a>
-            <a href="upcoming.html">Estrenos</a>
-        </div>
-    </div>
-    <h1>Upconming</h1>
-    <p>Proximos estrenos de peliculas de MARVEL</p>
-    <div>
-        
-
-    </div>
-
-
-
+    <header class="navbar"> 
+            <img src="images/logo.jpg" alt="" class="logo" style="padding-left: 30px;">
+            
+            <nav>
+                <ul class="enlaces">
+                    <li class="items"><a href="index.html">Home</a></li>
+                    <li class="items"><a href="Movies.html">Peliculas</a></li>
+                    <li class="items"><a href="upcoming.html">Estrenos</a></li>
+                    <li class="items"><a href="index.html">About Us</a></li>
+                    <li onclick="showSidebar()"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+                </ul>
+                <ul class="sidebar">
+                    <li onclick="closeSidebar()"><a href="#"><ion-icon name="close-outline"></ion-icon></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Movies.html">Peliculas</a></li>
+                    <li><a href="upcoming.html">Upcoming</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <img src="images/logo.jpg" alt="" style="height: 70px; width: 70px;">
+                </ul>
+            </nav>
+            <!--<div class=" !important--
+            <div class="enlaces" id="enlaces">
+                <a class="active" href="index.html">Home</a>
+                <a href="Movies.html">Peliculas</a>
+                <a href="upcoming.html">Estrenos</a>
+            </div> -->
+    </header>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

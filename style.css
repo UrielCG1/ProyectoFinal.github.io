@@ -1,10 +1,20 @@
+*{  
+  padding: 0%;
+  margin: 0%;
+  
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
   }
 
   .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,26 +32,110 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
 
-.navbar .titulo {
-    font-style:italic;
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    color: #ffffff;
+.logo {
+    width: 80px;
+    height: 80px;
 }
 
 .navbar .enlaces {
     display: flex;
     gap: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navbar .enlaces a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  z-index: 999;
+  background-color: rgb(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: -3px 0 10px black;
+  display: none;
+  justify-content: flex-start;
+  list-style: none;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  transform: translateX(100%);
+}
+.sidebar li{
+  width: 100%;
+  margin: 25px;
+  text-shadow: 1px 1px 2px black;
+  
+}
+.sidebar img{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 120px;
+}
+nav ion-icon{
+  font-size: 2em;
+  
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+.sidebar a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.342);
+}
+/* QUERY PARA HACER QUE LOS ENLACES SE HAGAN 
+COLUMNA AL HACER MÁS PEQUEÑA LA VENTANA < 500px 
+@media screen and (max-width: 768px) {
+  .navbar .enlaces {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+  }
+  .menu-icon{
+    display: flex;
+    cursor: pointer;
+  }
+  .navbar .enlaces{
+    display: none;
+  }
+  .navbar .enlaces.show{
+    display: flex;
+  }
+}*/
+
+@media only screen and (min-width: 800px){
+  .enlaces ion-icon{
+      display: none;
+      
+  }
+}
+@media only screen and (max-width: 800px){
+  .enlaces .items{
+      display: none;
+  }
+}
+
+
+
+.main{
+  padding-top: 5rem;
 }
   a {
     color: #005a9c;
     text-decoration: none;
   }
+
 h1, h2, h3 {
     font-weight: normal;
     margin: 0;
@@ -57,7 +151,7 @@ h1, h2, h3 {
     padding: 20px;
     background-color: #e8e8e8;
     border-bottom: 1px solid #ddd;
-    
+    padding-top: 1rem;
   }
   .h2Marvel {
     color: #333;
@@ -90,10 +184,7 @@ h1, h2, h3 {
     padding: 20px;
   }
   
-  img {
-    border-radius: 5px;
-    margin-right: 10px;
-  }
+  
   
   figcaption {
     color: #666;
@@ -129,32 +220,107 @@ h1, h2, h3 {
   .peliculas a:hover{
     text-decoration: underline;
   }
-  .peliculas-info{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+  .peliculas ul{
+    flex-direction: row;
   }
 
-  
-  /* IMAGENES DE PELICULAS, al pasar el mouse por encima se activa y desactiva la anición con el uso de HOVER¿*/
-  .imagenes-peliculas {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
+
+  /* DISEÑO DE IMAGENES DE ARCHIVO MOVIES.HTML */
+  .proyecto-responsivo img{
+    width:100%;
+    margin-bottom: 10px;
+      border-radius: 30%;
+      padding-top: 10px;
   }
   
-  .imagenes-peliculas {
+  .proyecto-responsivo div img{
+      width:150px;
+      height: 150px;
+      display:block;
+      margin:auto;
+  }
+  
+  .proyecto-responsivo div p{
+      text-align: center;
+      font-size: 20px;
+      padding-top: 15pxñ;
+  }
+  
+  .proyecto-responsivo div{
+    display: inline-block;
+    width: 24%;
+    margin: 5px;
+    padding: 2px;
+    background-color: #adadad59;
+  }
+  @media (max-width: 771px) {
+    .proyecto-responsivo div {
+      width: 45%; /* Sets div width to 45% at screens less than 772px */
+      display: flex; 
+    }
+    .proyecto-responsivo img {
+      max-height: 30vh; /* Sets image max-height to 30% of viewport height */
+    }
+  }
+
+  @media only screen and (min-width: 998px) {
+    .proyecto-responsivo div {
+      width: 30%; /* Sets div width to 30% at screens greater than or equal to 998px */
+    }
+  }
+
+
+  /* IMAGENES DE PELICULAS, al pasar el mouse por encima se activa y desactiva la anición con el uso de HOVER¿*/
+  .peliculas-info {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.imagenes-peliculas img {
+  border-radius: 5px;
+  margin-right: 10px;
+}
+@media (min-width: 900px) {
+  .peliculas-info {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 900px) {
+  .peliculas-info {
+    flex-direction: column;
+  }
+}
+
+.peliculas-info section {
+  flex: 1 1 auto;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagenes-peliculas {
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+}
+.peliculas-info figcaption {
+  padding: 10px;
+}
+  
+  /*.imagenes-peliculas {
     border: 5px solid #007bff;
     transition: transform 0.3s ease;
-  }
+  }*/
   
-  .imagenes-peliculas:hover {
+  .imagenes-peliculas:hover, .img2:hover:hover {
     transform: scale(1.1);
   }
   
-  .imagenes-peliculas:before {
+  .imagenes-peliculas .img2:before {
     content: "";
     position: absolute;
     top: 0;
@@ -166,7 +332,7 @@ h1, h2, h3 {
     transition: opacity 0.3s ease;
   }
   
-  .imagenes-peliculas:hover:before {
+  .imagenes-peliculas .img2:hover:before {
     opacity: 1;
   }
   
