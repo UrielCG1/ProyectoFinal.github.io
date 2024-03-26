@@ -3,11 +3,16 @@
   margin: 0%;
   
 }
+header {
+  width: auto !important;
+  
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+    
   }
 
   .navbar {
@@ -89,7 +94,7 @@ nav ion-icon{
   color: white;
 }
 
-.sidebar a:hover {
+.items a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: rgba(0, 0, 0, 0.342);
 }
@@ -114,7 +119,14 @@ COLUMNA AL HACER MÁS PEQUEÑA LA VENTANA < 500px
   }
 }*/
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 800px) {
+  .enlaces ion-icon{
+      display: none;
+      
+  }
+}
+
+@media only screen and (min-height: 768px) {
   .enlaces ion-icon{
       display: none;
       
