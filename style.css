@@ -126,12 +126,6 @@ COLUMNA AL HACER MÁS PEQUEÑA LA VENTANA < 500px
   }
 }
 
-@media only screen and (min-height: 768px) {
-  .enlaces ion-icon{
-      display: none;
-      
-  }
-}
 @media only screen and (max-width: 800px){
   .enlaces .items{
       display: none;

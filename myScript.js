@@ -1,18 +1,3 @@
-/*const menuIcon = document.querySelector('.menu-icon');
-const enlaces = document.querySelector('.enlaces');
-const navbar = document.querySelector('.navbar');
-
-menuIcon.addEventListener('click', () => {
-  navbar.enlaces.style.display = (navbar.enlaces.style.display === 'flex') ? 'none ' : 'none';
-});
-*/
-/*const menuIcon = document.getElementById('menu-icon');
-const enlaces = document.getElementById('enlaces');
-
-menuIcon.addEventListener('click', () => {
-    enlaces.style.display = (enlaces.style.display === 'flex') ? 'none' : 'column';
-});*/
-
 
 function showSidebar() {
   const sidebar = document.querySelector(".sidebar");
